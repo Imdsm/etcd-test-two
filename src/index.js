@@ -1,6 +1,6 @@
 var http = require('http'),
     Etcd = new require('node-etcd'),
-    etcd = new Etcd('127.0.0.1', '4001');
+    etcd = new Etcd('172.17.42.1', '4001');
 
 console.log(process.env);
 
