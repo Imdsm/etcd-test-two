@@ -4,6 +4,6 @@ var http = require('http'),
 http.createServer(function(req, res) {
     etcd.get('test-signal', function(result) {
         res.writeHead(200, {'Content-Type': 'text/plain' });
-        res.end('Test signal is: ' + result);    
+        res.end('Test signal is: ' + result);
     });
-}).listen(80);
+}).listen(process.env.PORT || 8000);
