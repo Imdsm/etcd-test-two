@@ -7,6 +7,7 @@ http.createServer(function(req, res) {
     //     res.writeHead(200, {'Content-Type': 'text/plain' });
     //     res.end('Test signal is: ' + result);
     // });
+    console.log('getting "test-signal" value: ');
     etcd.get('test-signal', console.log);
 
     res.writeHead(200, {'Content-Type': 'text/plain' });
