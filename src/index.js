@@ -5,6 +5,8 @@ var http = require('http'),
 console.log(process.env);
 
 http.createServer(function(req, res) {
+    etcd.get('test-signal', console.log);
+
     etcd.get('test-signal', function(result) {
         res.writeHead(200, {'Content-Type': 'text/plain' });
         res.end('Test signal is: ' + result);
