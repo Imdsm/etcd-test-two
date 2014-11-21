@@ -2,6 +2,8 @@ var http = require('http'),
     Etcd = new require('node-etcd'),
     etcd = new Etcd('127.0.0.1', '4001');
 
+console.log(process.env);
+
 http.createServer(function(req, res) {
     // etcd.get('test-signal', function(result) {
     //     res.writeHead(200, {'Content-Type': 'text/plain' });
